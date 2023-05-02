@@ -68,13 +68,15 @@ const newer = students.map(element => element.results.english);
 console.log(newer);
 
 const biggest = students.reduce((acc,curr) => {
-        console.log("BEFORE Acc:",acc)
+//        console.log("BEFORE Acc:",acc)
 
     if (curr.results.english > acc.max) {
         acc = {name:curr.name, max:curr.results.english};
     }
     console.log("Acc:",acc)
-   console.log("Curr:",curr.name,curr.results.english)
+    console.log("Current:",curr.name,curr.results.english)
+
+   //console.log("Curr:",curr.name,curr.results.english)
     return acc;
     }, {name: 'blank', max: 0});
-console.log(biggest);
+console.log(biggest.name,biggest.max);
